@@ -1,28 +1,22 @@
 package guru.springframework.sfgpetclinic.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
+/**
+ * Created by jt on 7/13/18.
+ */
 public class Pet {
 
-    private Date birthDate;
-    private PetType type;
+    private PetType petType;
     private Owner owner;
+    private LocalDate birthDate;
 
-
-    public Date getBirthDate() {
-        return birthDate;
+    public PetType getPetType() {
+        return petType;
     }
 
-    public void setBirthDate(Date birthDate) {
-        this.birthDate = birthDate;
-    }
-
-    public PetType getType() {
-        return type;
-    }
-
-    public void setType(PetType type) {
-        this.type = type;
+    public void setPetType(PetType petType) {
+        this.petType = petType;
     }
 
     public Owner getOwner() {
@@ -31,5 +25,13 @@ public class Pet {
 
     public void setOwner(Owner owner) {
         this.owner = owner;
+    }
+
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
     }
 }
